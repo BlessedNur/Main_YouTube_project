@@ -1,0 +1,306 @@
+@import './mixins';
+
+nav {
+  @include displayAlign(center);
+  padding: .48em .5em;
+  align-items: center;
+  margin-right: $mr;
+  background: $bg-color;
+
+  svg {
+    fill: $nav-fill;
+  }
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .search-container,
+  .left,
+  .middle,
+  .right {
+    @include displayFlex;
+    gap: 0 1em;
+  }
+
+  .left {
+    gap: 0 1.65em;
+
+    .menu-bars {
+      transform: translateX(9px);
+      cursor: pointer;
+      padding: .47em .3em;
+      border-radius: 50%;
+      outline: .2px solid transparent;
+
+      &:active {
+        outline: .2px solid $nav-fill;
+      }
+
+      &:hover {
+        transition: .7s;
+        background: $pt-bg-colors;
+        padding: .47em .3em;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .right {
+    gap: 0 .8em;
+
+    .camera {
+      padding: .4em .2em;
+      @include gridCenter;
+      border-radius: 50%;
+      margin-top: 4px;
+      cursor: pointer;
+      position: relative;
+
+      span {
+        left: -5px;
+      }
+
+
+      &-fill {
+        display: none;
+      }
+
+      &-two-style {
+        padding: .04em .2em;
+        @include gridCenter;
+      }
+
+      &-two-none {
+        display: none;
+      }
+    }
+
+    .camera-two {
+      display: none;
+      fill: transparent;
+
+      &-hover {
+        background: none;
+      }
+    }
+
+    .camera,
+    .notifications {
+      &:hover {
+        background-color: $pt-bg-colors;
+      }
+    }
+
+    .upload {
+      position: absolute;
+      background: $pt-bg-colors;
+      min-width: max-content;
+      color: white;
+      border-radius: 7px;
+      font-size: 14px;
+      display: none;
+      padding: .6em 0;
+      top: 3.1em;
+      z-index: 4;
+
+      &-two {
+        display: block;
+      }
+
+
+      .fs {
+        padding: .5em 2.5em .5em 1.5em;
+        @include displayFlex;
+        gap: 0 1em;
+         &:hover{
+          background: #3e3e3e;
+         }
+      }
+    }
+  }
+
+  .search-container {
+    width: 37.5em;
+    margin-left: 1.5em;
+    gap: 0;
+    position: relative;
+
+    .x-button {
+      position: absolute;
+      right: 10%;
+      border-radius: 50%;
+      border: none;
+      width: 1em;
+      height: 1em;
+      display: grid;
+      place-content: center;
+      cursor: pointer;
+      font-family: 'ken';
+      z-index: 1;
+      font-size: 45px;
+      color: $nav-fill;
+      background: none;
+
+      &:active {
+        background-color: #7070706f;
+      }
+
+      &:hover {
+        background: #7371716f;
+      }
+    }
+
+    .x-button-two {
+      display: none;
+    }
+
+    input {
+      padding: .6em 1em;
+      width: 100%;
+      background-color: $search-container-bg;
+      border: $search-border;
+      border-right: none;
+      outline: none;
+      font-size: $normal-fs;
+      border-radius: 30px 0 0 30px;
+      font-family: $general-fontf;
+      color: $nav-fill;
+
+      &:focus {
+        border: 1px solid rgb(98, 98, 243);
+        border-radius: 0;
+      }
+
+      &:focus+.pop-svg {
+        visibility: visible;
+        border: 1px solid rgb(98, 98, 243);
+        border-right: none;
+      }
+    }
+
+    .pop-svg {
+      background: $search-container-bg;
+      border: 1px solid $search-border;
+      position: absolute;
+      left: -32px;
+      visibility: hidden;
+      padding: .45em 1.5em;
+      border-radius: 30px 0 0 30px;
+      padding-right: 0;
+      border-right: none;
+
+      svg {
+        transform: translateX(-7px);
+        padding: 0;
+      }
+    }
+
+
+  }
+
+  .notifications,
+  .camera,
+  .mic,
+  .search-icon {
+    span {
+      position: absolute;
+      color: $nav-fill;
+      padding: .85em .6em;
+      background: #707070e3;
+      border-radius: 4px;
+      font-size: 12px;
+      left: 6px;
+      top: 5em;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .search-icon {
+    background: $notification-bg-color;
+    padding: .45em 1em;
+    border-radius: 0 25px 25px 0;
+    border: $search-border;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .notifications,
+  .camera,
+  .mic,
+  .search-icon {
+    &:hover {
+      span {
+        visibility: visible;
+        opacity: 1;
+        transition: .4s;
+        z-index: 3;
+      }
+    }
+  }
+
+  .notifications {
+    position: relative;
+    padding: .45em .3em;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(-2[x]);
+    z-index: 2;
+
+    p {
+      color: $nav-fill;
+      position: absolute;
+      top: 3px;
+      right: -5.5px;
+      display: inline-block;
+      padding: 0 4px;
+      min-width: 8px;
+      max-width: 18px;
+      height: 16px;
+      border: 1px solid #212121;
+      border-radius: 22px;
+      text-align: center;
+      font-family: $general-fontf;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      background: #c00;
+    }
+
+    span {
+      left: -1.5em;
+    }
+  }
+
+
+
+  .mic {
+    background-color: $notification-bg-color;
+    padding: .47em;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #474747ad;
+    }
+
+    span {
+      width: 10em;
+      left: -4em;
+      top: 4.8em;
+    }
+  }
+
+  .user {
+    height: 32px;
+    width: 32px;
+    background: url(/images/me.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(5px);
+  }
+}

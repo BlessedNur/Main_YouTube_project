@@ -1,0 +1,50 @@
+@import './mixins';
+
+.overflow-shorts{
+  overflow: hidden;
+  height: 29.1em;
+}
+.shorts-bottom-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em 1em;
+  overflow: hidden;
+  /* background: red; */
+  border-bottom: 1px solid $category-hover;
+  margin-right: 1em;
+  .container-top-section{
+    width: 100%;
+    img{
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: .8em;
+    }
+  }
+  .bot-shorts{
+    display: flex;
+  }
+  .shorts-meta-data{
+    font-size: 14px;
+    color: $meta-color;
+    @include fontFamily('roboto-med');
+  }
+}
+
+  .show-more{
+    position: absolute;
+    bottom: -20px;
+    left: 45%;
+    font-size: 14px;
+    background: $bg-color;
+    padding: .5em 9em;
+    gap: 0 .3em;
+    border-radius: 30px;
+    color: $nav-fill;
+    @include displayFlex;
+    @include fontFamily('roboto-med');
+    border: 1px solid $category-hover;
+
+    &:hover{
+      background: $category-hover;
+    }
+  }

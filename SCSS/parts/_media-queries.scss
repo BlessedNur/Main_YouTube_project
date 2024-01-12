@@ -1,0 +1,100 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    $bg-color: white;
+    $channel-name-hover: #707070;
+    $channel-title: #000;
+    $nav-fill: #000;
+    $search-container-bg: white;
+    $pt-bg-colors: #e5e5e5;
+    $basic-bg: #f2f2f2;
+    $search-border: 1px solid #dbdbdb;
+    $category-hover: #dbdbdb;
+    $meta-color: #707070;
+    $notification-bg-color: #f8f8f8;
+  }
+
+  .mic {
+    background: $basic-bg;
+  }
+
+  .mic:hover {
+    background: $category-hover;
+  }
+
+  .category {
+    background: $basic-bg;
+  }
+
+  .active {
+    background: $basic-bg;
+  }
+
+  .aside-two {
+    fill: black;
+    color: #000;
+  }
+
+  .items:hover {
+    background: $basic-bg;
+  }
+
+  .menu-bars:hover {
+    background: $basic-bg;
+  }
+
+  .search-container input {
+    color: black;
+    /* box-shadow: inset .3px 1px .2px .6px rgba(0, 0, 0, 0.055); */
+    box-shadow: inset 0 1px 2px #eee;
+  }
+
+  .active-cat {
+    background: black;
+    color: white;
+  }
+
+  .hover-channel-name {
+    background: #707070d5;
+  }
+
+  .close-text p {
+    color: #606060;
+  }
+
+  .name-section,
+  .name-section svg {
+    fill: #707070;
+    color: #707070;
+  }
+
+  .video-channel-name:hover {
+    color: #313131;
+  }
+
+  .fa-ellipsis-vertical {
+    color: black;
+  }
+
+  .exc:hover {
+    background: none;
+    cursor: text;
+  }
+
+  .aside2 svg {
+    fill: black;
+  }
+
+  .aside2 {
+    color: black;
+
+  }
+
+  .upload {
+    color: black;
+  }
+
+  .fs:hover {
+    background-color: $basic-bg;
+  }
+
+}

@@ -1,0 +1,142 @@
+@import './mixins';
+
+.sidebar {
+
+  height: 93vh;
+  overflow: scroll;
+  padding-top: 1em;
+  padding: 12px;
+  max-width: 17em;
+  min-width: 10em;
+
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      visibility: visible;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #717171;
+    border-radius: 15px;
+    visibility: hidden;
+  }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    background: none;
+    width: .6em;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      visibility: visible;
+    }
+  }
+
+  .second-nav {
+    width: 93%;
+  }
+  
+  .line {
+    height: 1px;
+    background-color: #4d4c4c;
+    margin: .7rem;
+    width: 210px;
+    margin-left: -.05rem;
+    
+  }
+
+  
+
+  .headerr {
+    @include fonts(16px, normal);
+    transform: translateX(-.3em);
+    margin-right: 10px;
+    @include fontFamily('roboto-med');
+  }
+  
+  .exc:hover {
+    background: none;
+    cursor: text;
+  }
+}
+  .aside-two {
+    background: $bg-color;
+    color: $channel-name-hover;
+    fill: $nav-fill;
+    float: left;
+    height: 1000vh;
+    margin-right: 1.7em;
+    margin-top: -3.45em;
+    max-width: 17.5%;
+    position: relative;
+  }
+  
+  .display {
+    display: none;
+  }
+
+  .display-two {
+    display: block;
+  }
+  
+  .close-text {
+    @include flexColumn;
+    
+    p {
+      padding: 12px 0px;
+      padding-left: .6em;
+      
+      a {
+        font-size: 13px;
+        text-align: start;
+        word-spacing: 5px;
+        color: $meta-color;
+        text-decoration: none;
+      }
+    }
+
+    .sml {
+      color: $meta-color;
+      font-size: 11px;
+    }
+  }
+    
+      .items {
+        @include displayFlex;
+        text-align: center;
+        padding: 8px 16px 8px 17px;
+        cursor: pointer;
+        gap: 0 .2em;
+        
+          &:hover {
+          background-color: $active-sidebar;
+          border-radius: 8px;
+        }
+    
+        p {
+          margin-left: 1.3em;
+          font-size: 14px;
+        }
+        
+        svg {
+          margin-left: -.4em;
+        }
+      }
+  
+
+
+
+
+
+      
+
+      .active {
+        background: $active-sidebar;
+        padding-top: 7x;
+        border-radius: 8px;
+      }

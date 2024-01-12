@@ -1,0 +1,62 @@
+@import './mixins';
+
+
+.shorts-head {
+  margin-right: 2em;
+  @include displayAlign(center);
+  position: relative;
+  margin-bottom: 3em;
+
+  &>.right-close:hover+.interest {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .left-shorts {
+    display: flex;
+    font-size: 20px;
+    gap: 0 .3em;
+
+    h3 {
+      font-weight: normal;
+      @include fontFamily('roboto-med');
+    }
+  }
+
+  .right-close {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    @include gridCenter;
+    cursor: pointer;
+
+    &:hover {
+      background: $category-hover;
+    }
+
+    .right-shorts {
+      @include fonts(50px, 100);
+      @include fontFamily('ken');
+      @include gridCenter;
+    }
+  }
+  
+.interest {
+  /* visibility: visible; */
+  /* opacity: 1; */
+  top: .5em;
+  right: 5em;
+  position: absolute;
+  // background: red;
+  width: fit-content;
+  font-size: 12px;
+  padding: 1em;
+  background: #707070ce;
+  border-radius: 4px;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+}
+
+}

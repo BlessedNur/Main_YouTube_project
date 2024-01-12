@@ -1,0 +1,221 @@
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em 1em;
+  margin-right: 2em;
+  height: 42em;
+  overflow: hidden;
+  padding-top: 1.35em;
+
+  .video-container {
+    @include flexColumn;
+    margin-bottom: 2em;
+    color: $nav-fill;
+
+    .thumbnail {
+      position: relative;
+      display: flex;
+
+      &::before {
+        background-color: rgba(0, 0, 0, 0.603);
+        border-radius: 6px;
+        bottom: 3px;
+        color: $nav-fill;
+        content: attr(data-duration);
+        font-size: 12px;
+        padding: .2rem .3rem;
+        @include fontFamily('roboto-med');
+        position: absolute;
+        right: 5px;
+
+      }
+
+      &-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        min-width: 250px;
+        min-height: 150px;
+        background-color: $meta-color;
+      }
+    }
+
+    &:hover {
+      .thumbnail::before {
+        background-color: transparent;
+        color: transparent;
+        transition: .3s;
+      }
+    }
+
+    &:hover {
+
+      .thumbnail-image {
+        border-radius: 0;
+        transition: .6s;
+      }
+    }
+  }
+
+  .video-bottom-section {
+    @include displayAlign(flex-start);
+    margin-top: 1em;
+    position: relative;
+    width: 100%;
+
+    .channel-icon {
+      margin-right: .75em;
+      border-radius: 50%;
+      width: 43px;
+      height: 43px;
+      background-color: $meta-color;
+    }
+
+    .video-details {
+      @include flexColumn;
+      width: 100%;
+
+      .video-title {
+        font-size: $normal-fs;
+        text-decoration: none;
+        @include fontFamily('roboto-med');
+        color: $channel-title;
+        margin-bottom: 1em;
+        width: 100%;
+      }
+    }
+
+    .video-channel-name {
+
+      &:hover {
+        color: $channel-name-hover;
+      }
+
+      &:hover>span {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .hover-channel-name {
+      background-color: #707070ce;
+      border-radius: 5px;
+      color: $nav-fill;
+      font-size: 12px;
+      left: -4px;
+      opacity: 0;
+      padding: .5em;
+      position: absolute;
+      top: -4.6em;
+      transition: .2s;
+      visibility: hidden;
+      width: fit-content;
+    }
+
+    .name-section {
+      @include displayAlign(center);
+      color: $meta-color;
+      font-size: 14px;
+      gap: .2em;
+      line-height: 22px;
+      margin-top: .4em;
+      width: fit-content;
+      a{
+        color: inherit;
+        position: relative;
+        text-decoration: none;
+
+      }
+
+      svg {
+        transform: translateY(2.5px);
+        fill: $meta-color;
+      }
+
+      .svgg {
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          .verified {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        .verified{
+          background: #707070ce;
+          border-radius: 4px;
+          color: $nav-fill;
+          font-size: 12px;
+          left: -2em;
+          opacity: 0;
+          padding: .4em .8em;
+          position: absolute;
+          top: -4.4em;
+          transition: .2s;
+          visibility: hidden;
+          white-space: nowrap;
+      
+        }
+
+        .official{
+          left: -4.5em;
+        }
+
+      }
+    }
+
+  }
+    .three-dot {
+      /* background: red; */
+      height: 25px;
+      padding: .4em .6em;
+      padding-bottom: 0;
+      border-radius: 50%;
+      margin-top: .5em;
+      transform: translateY(4px);
+      outline: .2px solid transparent;
+      transition-duration: .8s;
+      position: relative;
+
+
+      &:active {
+        outline: .2px solid $meta-color;
+        background: $category-hover;
+        transition-delay: outline .1s;
+      }
+    }
+  
+  .menu-pop {
+    position: absolute;
+    background: red;
+    width: fit-content;
+    white-space: nowrap;
+    top: -1em;
+    display: none;
+
+  }
+  .video-details-section{
+    display: flex;
+    justify-content: space-between;
+  }
+  .video-metadata{
+    font-size: 14px;
+    color: $meta-color;
+  }
+}
+    
+      .fa-ellipsis-vertical {
+        @include fontFamily('ken');
+        font-weight: 100;
+        padding: 1.1em .3em;
+        transform: translate(0, -1em);
+        cursor: pointer;
+        // background-color: red;
+    
+      }
+
+      .video-section-two{
+        margin-top: 2em;
+        height: auto;
+      }

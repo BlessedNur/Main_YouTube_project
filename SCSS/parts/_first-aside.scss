@@ -1,0 +1,40 @@
+@import './mixins';
+
+.aside2 {
+  color: $nav-fill;
+  @include fonts(10px, normal);
+  float: left;
+  height: 1000vh;
+  position: sticky;
+  top: 6.2em;
+  margin-right: 2em;
+  margin-left: -.19em;
+  display: none;
+
+  .left-aside {
+    @include flexColumn;
+    gap: .4em 0;
+    padding: .5em;
+  }
+
+
+  .hold {
+
+    box-sizing: content-box;
+    padding: 1.3em .15em;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .5em 0;
+    cursor: pointer;
+
+    &:hover {
+      background: $pt-bg-colors;
+    }
+  }
+
+  .home-icon div {
+    margin: 0 auto;
+  }
+}

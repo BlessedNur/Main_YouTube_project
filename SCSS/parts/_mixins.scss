@@ -1,0 +1,33 @@
+@mixin displayAlign($align) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align;
+}
+
+@mixin displayFlex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin gridCenter {
+  display: grid;
+  place-content: center;
+}
+
+@mixin AlignSelf($align) {
+  display: flex;
+  align-self: $align ;
+}
+@mixin fontFamily($family){
+  font-family: $family;
+}
+
+@mixin fonts($font-s,$font-w){
+  font-size: $font-s;
+  font-weight: $font-w;
+}
+
+@mixin flexColumn{
+  display: flex;
+  flex-direction: column;
+}

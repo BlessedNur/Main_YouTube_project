@@ -1,0 +1,41 @@
+body{
+  &::-webkit-scrollbar-thumb{
+    background:$meta-color;
+    border-radius: 15px;
+
+  }
+  &::-webkit-scrollbar{
+    background: none;
+    width: .6em;
+  }
+}
+
+body{
+  background: $bg-color;
+  font-family: 'roboto';
+  height: $body-height;
+  overflow-x: hidden;
+  .central{
+    margin: 0 auto;
+    max-width: $central-width;
+  };  
+}  
+
+.sticky {
+  background: red;
+  position: sticky;
+  top: 0;
+  background: $bg-color;
+  z-index: 1;
+  
+} 
+.linee{
+  height: 2px;
+  width: 0;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  left: 0;
+  transition: 2s ease-in;
+}

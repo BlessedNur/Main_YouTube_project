@@ -1,0 +1,160 @@
+@import './mixins';
+
+.categories {
+  @include AlignSelf(flex-end);
+  padding: .8em 0;
+  padding-bottom: 0;
+  background: $bg-color;
+  z-index: 1;
+  max-width: 92%;
+  position: relative;
+
+  .category-section {
+    @include AlignSelf(flex-start);
+    overflow: scroll;
+    max-width: 98%;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      visibility: hidden;
+    }
+
+    .category {
+      margin-right: .7em;
+      word-wrap: none;
+      white-space: nowrap;
+      color: $channel-title;
+      border: none;
+      border-radius: 7px;
+      background: $pt-bg-colors;
+      @include fonts(14px, 500);
+      @include fontFamily('roboto-med');
+      display: block;
+      cursor: pointer;
+      letter-spacing: -.6px;
+      padding: .5em .9em;
+
+    }
+
+    .hover-cat {
+      &:hover {
+        background-color: $category-hover;
+        transition: background-color 150ms;
+      }
+    }
+
+    .active-cat {
+      background-color: $channel-title ;
+      color: $text-cl;
+
+    }
+  }
+}
+
+.push {
+  @include gridCenter;
+  width: 4.5em;
+  height: 85%;
+  position: absolute;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), $bg-color 50%);
+  right: 10px;
+  top: 0;
+  
+  
+  span{
+    position: absolute;
+    color: $nav-fill;
+    padding: .85em .6em;
+    background: #707070e3;
+    border-radius: 4px;
+    font-size: 12px;
+    left: 35px;
+    top: 5em;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
+  
+
+  svg {
+    fill: $nav-fill;
+    height: 100%;
+    padding: .9em;
+    border-radius: 50%;
+    transform: translate(25px, 2px);
+    cursor: pointer;
+    
+    &:hover {
+      background: $category-hover;
+     
+    }
+  }
+  .arrow-right{
+    svg{
+      &:hover+span{
+          visibility: visible;
+          opacity: 1;
+      }
+    }
+  }
+}
+
+.push-two {
+  @include gridCenter;
+  width: 4.5em;
+  height: 85%;
+  position: absolute;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), $bg-color 50%);
+  left: 0;
+  top: 0;
+
+  span{
+    position: absolute;
+    color: $nav-fill;
+    padding: .85em .6em;
+    background: #707070e3;
+    border-radius: 4px;
+    font-size: 12px;
+    left: -15px;
+    top: 5em;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
+  
+  
+  svg {
+    fill: $nav-fill;
+    height: 100%;
+    padding: .9em;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotateY(180deg) translate(17px, 3px);
+    
+    &:hover {
+      background: $category-hover;
+    }
+  }
+  .arrow-left{
+    svg{
+      &:hover+span{
+          visibility: visible;
+          opacity: 1;
+      }
+    }
+  }
+}
+  .display-arrow-right {
+    display: none;
+  }
+  
+  .displayx {
+    display: none;
+  }
+  .display-arrow-left {
+    display: none;
+  }
