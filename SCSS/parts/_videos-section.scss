@@ -24,10 +24,9 @@
         content: attr(data-duration);
         font-size: 12px;
         padding: .2rem .3rem;
-        @include fontFamily('roboto-med');
+        font-weight: 600;
         position: absolute;
         right: 5px;
-
       }
 
       &-image {
@@ -78,7 +77,7 @@
       .video-title {
         font-size: $normal-fs;
         text-decoration: none;
-        @include fontFamily('roboto-med');
+        font-weight: 600;
         color: $channel-title;
         margin-bottom: 1em;
         width: 100%;

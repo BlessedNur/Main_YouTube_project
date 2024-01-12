@@ -124,7 +124,8 @@ document.querySelector('.arrow-left')
     push.classList.remove('display-arrow-right');
     push.classList.remove('displayx')
     scrolling.scrollLeft -= 100;
-    if (scrolling.scrollLeft === 8) {
+    console.log(scrolling.scrollLeft);
+    if (scrolling.scrollLeft === 0) {
       arrowLeft.classList.add('display-arrow-left');
     }
   })
@@ -143,8 +144,14 @@ function removeClasses() {
     tab.classList.remove('active-cat');
   });
 }
+function addHover() {
+  ca
+}
+
 categories.forEach(tab => {
-  tab.addEventListener('mouseover', () => { tab.classList.remove('hover-cat') });
+  tab.addEventListener('mouseover', () =>
+   { tab.classList.remove('hover-cat') });
+
   tab.addEventListener('click', () => {
     removeClasses();
     tab.classList.add('active-cat');

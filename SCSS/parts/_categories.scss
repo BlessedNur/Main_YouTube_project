@@ -31,8 +31,7 @@
       border: none;
       border-radius: 7px;
       background: $pt-bg-colors;
-      @include fonts(14px, 500);
-      @include fontFamily('roboto-med');
+      @include fonts(14px, 600);
       display: block;
       cursor: pointer;
       letter-spacing: -.6px;

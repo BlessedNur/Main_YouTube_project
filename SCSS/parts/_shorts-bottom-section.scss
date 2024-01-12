@@ -26,7 +26,7 @@
   .shorts-meta-data{
     font-size: 14px;
     color: $meta-color;
-    @include fontFamily('roboto-med');
+    @include fontFamily('roboto');
   }
 }
 
@@ -41,7 +41,7 @@
     border-radius: 30px;
     color: $nav-fill;
     @include displayFlex;
-    @include fontFamily('roboto-med');
+    @include fontFamily('roboto');
     border: 1px solid $category-hover;
 
     &:hover{

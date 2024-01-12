@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   padding: 0;
@@ -15,7 +16,7 @@ body::-webkit-scrollbar {
 
 body {
   background: #0f0f0f;
-  font-family: "Roboto", serif;
+  font-family: "Roboto", sans-serif;
   height: 1000vh;
   overflow-x: hidden;
 }
@@ -163,7 +164,8 @@ nav .search-container .x-button {
   display: grid;
   place-content: center;
   cursor: pointer;
-  font-family: "ken";
+  font-family: "lato";
+  font-weight: 100;
   z-index: 1;
   font-size: 45px;
   color: white;
@@ -294,12 +296,15 @@ nav .mic span {
 nav .user {
   height: 32px;
   width: 32px;
-  background: url(/images/me.jpg);
   background-size: cover;
   background-position: center;
-  border-radius: 50%;
   cursor: pointer;
   transform: translateX(5px);
+}
+nav .user img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
 }
 
 .categories {
@@ -334,8 +339,7 @@ nav .user {
   border-radius: 7px;
   background: #282828;
   font-size: 14px;
-  font-weight: 500;
-  font-family: "roboto-med";
+  font-weight: 600;
   display: block;
   cursor: pointer;
   letter-spacing: -0.6px;
@@ -516,7 +520,7 @@ nav .user {
   font-weight: normal;
   transform: translateX(-0.3em);
   margin-right: 10px;
-  font-family: "roboto-med";
+  font-family: "roboto";
 }
 .sidebar .exc:hover {
   background: none;
@@ -616,7 +620,7 @@ nav .user {
   content: attr(data-duration);
   font-size: 12px;
   padding: 0.2rem 0.3rem;
-  font-family: "roboto-med";
+  font-weight: 600;
   position: absolute;
   right: 5px;
 }
@@ -660,7 +664,7 @@ nav .user {
 .video-section .video-bottom-section .video-details .video-title {
   font-size: 16px;
   text-decoration: none;
-  font-family: "roboto-med";
+  font-weight: 600;
   color: #F1F1F1;
   margin-bottom: 1em;
   width: 100%;
@@ -806,7 +810,8 @@ nav .user {
 }
 .shorts-head .left-shorts h3 {
   font-weight: normal;
-  font-family: "roboto-med";
+  font-weight: 600;
+  font-family: "roboto";
 }
 .shorts-head .right-close {
   width: 3em;
@@ -822,7 +827,7 @@ nav .user {
 .shorts-head .right-close .right-shorts {
   font-size: 50px;
   font-weight: 100;
-  font-family: "ken";
+  font-family: "lato";
   display: grid;
   place-content: center;
 }
@@ -872,7 +877,7 @@ nav .user {
 .shorts-bottom-section .shorts-meta-data {
   font-size: 14px;
   color: #aaa;
-  font-family: "roboto-med";
+  font-family: "roboto";
 }
 
 .show-more {
@@ -887,7 +892,7 @@ nav .user {
   color: white;
   display: flex;
   align-items: center;
-  font-family: "roboto-med";
+  font-family: "roboto";
   border: 1px solid #4d4c4c;
 }
 .show-more:hover {

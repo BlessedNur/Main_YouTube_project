@@ -19,7 +19,8 @@
 
     h3 {
       font-weight: normal;
-      @include fontFamily('roboto-med');
+      font-weight: 600;
+      @include fontFamily('roboto');
     }
   }
 
@@ -36,7 +37,7 @@
 
     .right-shorts {
       @include fonts(50px, 100);
-      @include fontFamily('ken');
+      @include fontFamily('lato');
       @include gridCenter;
     }
   }
