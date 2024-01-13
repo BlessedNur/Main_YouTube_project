@@ -98,3 +98,33 @@
   }
 
 }
+
+
+@media screen and (max-width:1311px) {
+  .aside-two {
+    display: none;
+  }
+  .aside2{
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mic{
+   background-color: red;
+  }
+
+  .search-container{
+    width: 0em;
+    input{
+      display: none;
+      
+    }
+    .search-icon{
+      border: none;
+      background: none;
+      
+    }
+    
+ }
+  
+}

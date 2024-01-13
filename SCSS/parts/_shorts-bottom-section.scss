@@ -12,6 +12,11 @@
   /* background: red; */
   border-bottom: 1px solid $category-hover;
   margin-right: 1em;
+
+  article{
+    cursor: pointer;
+
+  }
   .container-top-section{
     width: 100%;
     img{
@@ -27,6 +32,7 @@
     font-size: 14px;
     color: $meta-color;
     @include fontFamily('roboto');
+
   }
 }
 
@@ -48,3 +54,8 @@
       background: $category-hover;
     }
   }
+  .shorts-title{
+    font-weight: 600;
+    line-height: 24px;
+  }
+  

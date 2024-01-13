@@ -8,28 +8,70 @@ function erase() {
 
 
 const asideElement = document.querySelector('aside');
-const aside2Element = document.querySelector('.aside2')
+const aside2Element = document.querySelector('.aside2'),
+  searchContainer = document.querySelector('.search-container'),
+  menuBars = document.querySelector('menu-bars'),
+  mic = document.querySelector('.mic'),
+  videoSection = document.querySelector('.video-container'),
+  categorySection = document.querySelector('.category-section');
+
+
+function mediaQuery() {
+  if (query.matches) {
+
+    searchContainer.style.width = '2em';
+    mic.style.background = 'none';
+    aside2Element.style.display = 'none';
+    videoSection.style.transform = 'translateX(1em)';
+    categorySection.style.transform = 'translateX(1em)';
+  } else {
+    searchContainer.style.width = '37.5em'
+  }
+}
+
+// let query = window.matchMedia('(max-width: 990px)');
+// let query = window.matchMedia('(max-width: 768px)');
+let query = window.matchMedia('(max-width: 425px)');
+
+
+
+
+query.addEventListener('change', () => {
+  mediaQuery();
+})
+
+
+
+
+
+
 function change() {
 
   if (!asideElement.classList.contains('display')) {
+
     asideElement.classList.add('display');
+
     if (asideElement.classList.contains('display')) {
+
       aside2Element.classList.add('display-two');
-      return;
+
     }
+
     console.log(asideElement);
-    return;
+
   } else {
+
     asideElement.classList.remove('display');
+
     if (!asideElement.classList.contains('display')) {
+
       aside2Element.classList.remove('display-two');
-      return;
+
     }
+
     console.log(asideElement);
 
   }
-
-
 };
 let searching = document.querySelector('.search-input')
 let xbutton = document.querySelector('.x-button');
@@ -103,8 +145,9 @@ document.querySelector('.arrow-right')
 
 
     scrolling.scrollLeft += 100;
+    console.log(scrolling.scrollLeft);
 
-    if (scrolling.scrollLeft === 600) {
+    if (scrolling.scrollLeft === 600 || scrolling.scrollLeft === 463) {
       push.classList.add('displayx');
     }
     if (scrolling.scrollWidth > 20) {
@@ -149,8 +192,7 @@ function addHover() {
 }
 
 categories.forEach(tab => {
-  tab.addEventListener('mouseover', () =>
-   { tab.classList.remove('hover-cat') });
+  tab.addEventListener('mouseover', () => { tab.classList.remove('hover-cat') });
 
   tab.addEventListener('click', () => {
     removeClasses();
