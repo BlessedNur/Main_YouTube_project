@@ -7,15 +7,15 @@ function erase() {
 }
 
 
-const asideElement = document.querySelector('aside');
-const aside2Element = document.querySelector('.aside2'),
-  searchContainer = document.querySelector('.search-container'),
-  menuBars = document.querySelector('.menu-bars'),
-  mic = document.querySelector('.mic'),
-  videoSection = document.querySelector('.video-container'),
-  categorySection = document.querySelector('.categories');
-
 // Media queries
+const asideElement = document.querySelector('aside'),
+      aside2Element = document.querySelector('.aside2'),
+      searchContainer = document.querySelector('.search-container'),
+      menuBars = document.querySelector('.menu-bars'),
+      mic = document.querySelector('.mic'),
+      videoSection = document.querySelector('.video-container'),
+      categorySection = document.querySelector('.categories');
+
 
 function mediaQuery() {
   if (query.matches) {
@@ -81,7 +81,7 @@ let querySix= window.matchMedia('(max-width: 648px)'),
     queryFour = window.matchMedia('(max-width: 890px)'),
     queryThree = window.matchMedia('(max-width: 988px)'),
     queryTwo = window.matchMedia('(max-width: 768px)'),
-    query = window.matchMedia('(max-width: 500px)');
+    query = window.matchMedia('(max-width: 500px)','(max-height:724px)');
 
 
 querySix.addEventListener('change', () => {
@@ -110,7 +110,7 @@ query.addEventListener('change', () => {
 })
 
 
-
+// media query end
 
 
 
