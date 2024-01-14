@@ -151,6 +151,7 @@ nav .right .upload .fs:hover {
 }
 nav .search-container {
   width: 37.5em;
+  transition: 1s;
   margin-left: 1.5em;
   gap: 0;
   position: relative;
@@ -890,6 +891,7 @@ nav .user img {
   position: absolute;
   bottom: -20px;
   left: 45%;
+  white-space: nowrap;
   font-size: 14px;
   background: #0f0f0f;
   padding: 0.5em 9em;
@@ -989,9 +991,34 @@ nav .user img {
     display: block;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 900px) {
+  .show-more {
+    left: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .show-more {
+    left: 35%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .central {
+    padding: 0 1em;
+  }
+  body {
+    overflow-x: hidden;
+  }
   .mic {
     background-color: red;
+  }
+  .push {
+    display: none;
+  }
+  .arrow-right {
+    display: none;
+  }
+  .push-two {
+    display: none;
   }
   .search-container {
     width: 0em;
@@ -1003,7 +1030,41 @@ nav .user img {
     border: none;
     background: none;
   }
-  .search-container .aside2 {
+  .aside2 {
     display: none;
+  }
+  .show-more {
+    display: none;
+  }
+  .shorts-bottom-section {
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    border: none;
+  }
+  .shorts-bottom-section article {
+    position: relative;
+  }
+  .shorts-bottom-section .shorts-title {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+  }
+  .shorts-bottom-section .fa-ellipsis-vertical {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .shorts-bottom-section .shorts-meta-data {
+    display: none;
+  }
+  .overflow-shorts {
+    height: 20em;
+  }
+  .right-close {
+    display: none;
+    background-color: red;
+    visibility: hidden;
+  }
+  .shorts-head h3 {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */

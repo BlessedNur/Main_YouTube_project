@@ -10,36 +10,103 @@ function erase() {
 const asideElement = document.querySelector('aside');
 const aside2Element = document.querySelector('.aside2'),
   searchContainer = document.querySelector('.search-container'),
-  menuBars = document.querySelector('menu-bars'),
+  menuBars = document.querySelector('.menu-bars'),
   mic = document.querySelector('.mic'),
   videoSection = document.querySelector('.video-container'),
-  categorySection = document.querySelector('.category-section');
+  categorySection = document.querySelector('.categories');
 
-  // Media queries
+// Media queries
 
-// function mediaQuery() {
-//   if (query.matches) {
+function mediaQuery() {
+  if (query.matches) {
 
-//     searchContainer.style.width = '2em';
-//     mic.style.background = 'none';
-//     aside2Element.style.display = 'none';
-//     videoSection.style.transform = 'translateX(1em)';
-//     categorySection.style.transform = 'translateX(1em)';
-//   } else {
-//     searchContainer.style.width = '37.5em'
-//   }
-// }
+    searchContainer.style.width = '2em';
+    mic.style.background = 'none';
+    menuBars.style.display = 'none';
+    // aside2Element.style.display = 'none';
+  } else {
+    searchContainer.style.width = '5em';
+    // aside2Element.style.display = 'block';
 
-// // let query = window.matchMedia('(max-width: 990px)');
-// // let query = window.matchMedia('(max-width: 768px)');
-// let query = window.matchMedia('(max-width: 425px)');
+  }
+}
+function mediaQueryTwo() {
+  if (queryTwo.matches) {
+    searchContainer.style.width = '23em'
+  }
+  else {
+    searchContainer.style.width = '25em';
+    
+  }
+}
+function mediaQueryThree() {
+  if (queryThree.matches) {
+    searchContainer.style.width = '30em'
+  }else{
+    searchContainer.style.width = '37.5em';
+
+  }
+}
+function mediaQueryFour() {
+  if (queryFour.matches) {
+    searchContainer.style.width = '25em';
+  }else{
+    searchContainer.style.width = '30em';
+    
+  }
+}
+
+function mediaQueryFive() {
+  if (queryFive.matches) {
+    searchContainer.style.width = '15em';
+  }else{
+    searchContainer.style.width = '25em';
+
+  }
+};
+
+function mediaQuerySix() {
+  if (querySix.matches) {
+    searchContainer.style.width = '5em';
+  }else{
+    searchContainer.style.width = '15em';
+
+  }
+
+};
+
+let querySix= window.matchMedia('(max-width: 648px)'),
+    queryFive = window.matchMedia('(max-width: 744px)'),
+    queryFour = window.matchMedia('(max-width: 890px)'),
+    queryThree = window.matchMedia('(max-width: 988px)'),
+    queryTwo = window.matchMedia('(max-width: 768px)'),
+    query = window.matchMedia('(max-width: 500px)');
 
 
+querySix.addEventListener('change', () => {
+  mediaQuerySix();
+});
+
+queryFive.addEventListener('change', () => {
+  mediaQueryFive();
+});
+
+queryFour.addEventListener('change', () => {
+  mediaQueryFour();
+});
+
+queryThree.addEventListener('change', () => {
+  mediaQueryThree();
+});
 
 
-// query.addEventListener('change', () => {
-//   mediaQuery();
-// })
+queryTwo.addEventListener('change', () => {
+  mediaQueryTwo();
+});
+
+query.addEventListener('change', () => {
+  mediaQuery();
+})
 
 
 
