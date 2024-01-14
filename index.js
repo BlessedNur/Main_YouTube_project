@@ -15,30 +15,31 @@ const aside2Element = document.querySelector('.aside2'),
   videoSection = document.querySelector('.video-container'),
   categorySection = document.querySelector('.category-section');
 
+  // Media queries
 
-function mediaQuery() {
-  if (query.matches) {
+// function mediaQuery() {
+//   if (query.matches) {
 
-    searchContainer.style.width = '2em';
-    mic.style.background = 'none';
-    aside2Element.style.display = 'none';
-    videoSection.style.transform = 'translateX(1em)';
-    categorySection.style.transform = 'translateX(1em)';
-  } else {
-    searchContainer.style.width = '37.5em'
-  }
-}
+//     searchContainer.style.width = '2em';
+//     mic.style.background = 'none';
+//     aside2Element.style.display = 'none';
+//     videoSection.style.transform = 'translateX(1em)';
+//     categorySection.style.transform = 'translateX(1em)';
+//   } else {
+//     searchContainer.style.width = '37.5em'
+//   }
+// }
 
-// let query = window.matchMedia('(max-width: 990px)');
-// let query = window.matchMedia('(max-width: 768px)');
-let query = window.matchMedia('(max-width: 425px)');
-
-
+// // let query = window.matchMedia('(max-width: 990px)');
+// // let query = window.matchMedia('(max-width: 768px)');
+// let query = window.matchMedia('(max-width: 425px)');
 
 
-query.addEventListener('change', () => {
-  mediaQuery();
-})
+
+
+// query.addEventListener('change', () => {
+//   mediaQuery();
+// })
 
 
 
