@@ -81,7 +81,7 @@ let querySix= window.matchMedia('(max-width: 648px)'),
     queryFour = window.matchMedia('(max-width: 890px)'),
     queryThree = window.matchMedia('(max-width: 988px)'),
     queryTwo = window.matchMedia('(max-width: 768px)'),
-    query = window.matchMedia('(max-width: 500px)','(max-height:724px)');
+    query = window.matchMedia('(max-width: 500px)');
 
 
 querySix.addEventListener('change', () => {
