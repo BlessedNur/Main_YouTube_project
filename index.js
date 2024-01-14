@@ -27,7 +27,7 @@ function mediaQuery() {
   } else {
     searchContainer.style.width = '5em';
     // aside2Element.style.display = 'block';
-    mic.style.background ='#282828'
+    mic.style.background ='#282828';
 
   }
 }

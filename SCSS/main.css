@@ -151,7 +151,7 @@ nav .right .upload .fs:hover {
 }
 nav .search-container {
   width: 37.5em;
-  transition: 1s;
+  transition: 0.5s;
   margin-left: 1.5em;
   gap: 0;
   position: relative;
@@ -1007,9 +1007,6 @@ nav .user img {
   }
   body {
     overflow-x: hidden;
-  }
-  .mic {
-    background-color: red;
   }
   .push {
     display: none;
