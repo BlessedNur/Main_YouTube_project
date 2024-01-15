@@ -1002,8 +1002,33 @@ nav .user img {
   }
 }
 @media screen and (max-width: 500px) {
-  .central {
+  body {
     padding: 0 1em;
+  }
+  .mic {
+    transform: translateX(3em);
+  }
+  .middle {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .categories {
+    min-width: 100%;
+  }
+  nav {
+    margin-right: 0;
+    max-width: 75%;
+    justify-content: start;
+  }
+  nav .logo {
+    transform: translateX(-0.5em);
+  }
+  .video-section {
+    margin-right: 0;
+  }
+  .middle {
+    transform: translateX(10.5em);
+    max-width: 3em;
   }
   body {
     overflow-x: hidden;
@@ -1063,5 +1088,13 @@ nav .user img {
   }
   .shorts-head h3 {
     font-size: 16px;
+  }
+  .right {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 330px) {
+  nav .middle {
+    transform: translateX(4em);
   }
 }/*# sourceMappingURL=main.css.map */

@@ -28,6 +28,9 @@ function mediaQuery() {
     searchContainer.style.width = '5em';
     // aside2Element.style.display = 'block';
     mic.style.background ='#282828';
+    menuBars.style.display = 'block';
+
+
 
   }
 }

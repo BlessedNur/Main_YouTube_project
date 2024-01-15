@@ -123,8 +123,39 @@
 
 @media screen and (max-width: 500px) {
 
-  .central {
+  body{
     padding: 0 1em;
+  }
+  
+  .mic{
+    transform: translateX(3em);
+  }
+  .middle{
+    // display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .categories{
+    min-width: 100%;
+  }
+  nav{
+    margin-right: 0;
+    max-width: 75%;
+    justify-content: start;
+    .logo{
+      transform: translateX(-.5em);
+    }
+  }
+
+  .video-section{
+    margin-right: 0;
+  }
+  .middle{
+    transform: translateX(10.5em);
+    max-width: 3em;
+  }
+  .central {
+    // padding: 0 1em;
   }
 
   body {
@@ -200,6 +231,20 @@
   .shorts-head{
     h3{
       font-size: 16px;
+    }
+  }
+  .right{
+    visibility: hidden;
+  }
+}
+@media screen and (max-width:330px){
+  nav{
+    .middle{
+
+      // background-color: red;
+      transform: translateX(4em);
+
+      
     }
   }
 }
