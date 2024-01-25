@@ -48,7 +48,7 @@ body .central {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   padding: 0.48em 0.5em;
   align-items: center;
   margin-right: 2em;

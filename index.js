@@ -1,20 +1,23 @@
 
 function erase() {
-  if (searching.value === searching.value) {
+  if (searching.value) {
     searching.value = '';
-    xbutton.classList.add('x-button-two')
+    xbutton.classList.add('x-button-two');
+    searching.focus();
+
+
   }
 }
 
 
 // Media queries
 const asideElement = document.querySelector('aside'),
-      aside2Element = document.querySelector('.aside2'),
-      searchContainer = document.querySelector('.search-container'),
-      menuBars = document.querySelector('.menu-bars'),
-      mic = document.querySelector('.mic'),
-      videoSection = document.querySelector('.video-container'),
-      categorySection = document.querySelector('.categories');
+  aside2Element = document.querySelector('.aside2'),
+  searchContainer = document.querySelector('.search-container'),
+  menuBars = document.querySelector('.menu-bars'),
+  mic = document.querySelector('.mic'),
+  videoSection = document.querySelector('.video-container'),
+  categorySection = document.querySelector('.categories');
 
 
 function mediaQuery() {
@@ -27,7 +30,7 @@ function mediaQuery() {
   } else {
     searchContainer.style.width = '5em';
     // aside2Element.style.display = 'block';
-    mic.style.background ='#282828';
+    mic.style.background = '#282828';
     menuBars.style.display = 'block';
 
 
@@ -40,13 +43,13 @@ function mediaQueryTwo() {
   }
   else {
     searchContainer.style.width = '25em';
-    
+
   }
 }
 function mediaQueryThree() {
   if (queryThree.matches) {
     searchContainer.style.width = '30em'
-  }else{
+  } else {
     searchContainer.style.width = '37.5em';
 
   }
@@ -54,16 +57,16 @@ function mediaQueryThree() {
 function mediaQueryFour() {
   if (queryFour.matches) {
     searchContainer.style.width = '25em';
-  }else{
+  } else {
     searchContainer.style.width = '30em';
-    
+
   }
 }
 
 function mediaQueryFive() {
   if (queryFive.matches) {
     searchContainer.style.width = '15em';
-  }else{
+  } else {
     searchContainer.style.width = '25em';
 
   }
@@ -72,19 +75,19 @@ function mediaQueryFive() {
 function mediaQuerySix() {
   if (querySix.matches) {
     searchContainer.style.width = '5em';
-  }else{
+  } else {
     searchContainer.style.width = '15em';
 
   }
 
 };
 
-let querySix= window.matchMedia('(max-width: 648px)'),
-    queryFive = window.matchMedia('(max-width: 744px)'),
-    queryFour = window.matchMedia('(max-width: 890px)'),
-    queryThree = window.matchMedia('(max-width: 988px)'),
-    queryTwo = window.matchMedia('(max-width: 768px)'),
-    query = window.matchMedia('(max-width: 500px)');
+let querySix = window.matchMedia('(max-width: 648px)'),
+  queryFive = window.matchMedia('(max-width: 744px)'),
+  queryFour = window.matchMedia('(max-width: 890px)'),
+  queryThree = window.matchMedia('(max-width: 988px)'),
+  queryTwo = window.matchMedia('(max-width: 768px)'),
+  query = window.matchMedia('(max-width: 500px)');
 
 
 querySix.addEventListener('change', () => {
@@ -145,10 +148,10 @@ function change() {
 
   }
 };
-let searching = document.querySelector('.search-input')
+let searching = document.querySelector('.search-input');
 let xbutton = document.querySelector('.x-button');
 function check() {
-  if (searching.value === searching.value) {
+  if (searching.value) {
     xbutton.classList.remove('x-button-two');
 
   };

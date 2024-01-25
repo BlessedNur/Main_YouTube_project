@@ -1,7 +1,7 @@
 @import './mixins';
 
 nav {
-  @include displayAlign(center);
+  @include displayAlign(start);
   padding: .48em .5em;
   align-items: center;
   margin-right: $mr;
